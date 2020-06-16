@@ -102,7 +102,6 @@
     grid-gap: 15px;
     }
 }
-/* ------------ s3_painting_of_the_week -------------- */
 
 /* ------------ s4_about -------------- */
 .s4_about_grid{
@@ -214,33 +213,6 @@
 .my-cursor{
     cursor:pointer;
     outline: none;
-}
-
-.my-paintings-area{
-    grid-area: my-paintings-area;
-}
-
-#s6_paintings aside{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
-}
-
-#s6_paintings .windmill{
-    width: 60%;
-    justify-self: end;
-    align-self: end;
-}
-    
-@media (max-width: 768px) { 
-            
-    #s6_paintings aside{    
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas: 
-            "my-paintings-area"
-            "windmill"
-        ;
-    }
 }
 
 .painting-1{
