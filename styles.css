@@ -207,6 +207,14 @@
     outline: none;
 }
 
+.my-paintings-area{
+    grid-area: my-paintings-area;
+}
+
+.windmill{
+    grid-area: windmill;
+}
+
 #s6_paintings aside{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
@@ -216,6 +224,12 @@
     width: 60%;
     justify-self: end;
     align-self: end;
+}
+
+@media (max-width: 576px){
+    .windmill{
+        display: none;
+    }
 }
 
 .painting-1{

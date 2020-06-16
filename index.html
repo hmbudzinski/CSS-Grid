@@ -20,6 +20,29 @@
     <h1 style="font-family: 'Cedarville Cursive', cursive;">La Galerie d'art de Rembrandt
     </h1>
     
+    <!--00 NAVBAR-->
+    <nav class="fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand text-danger" href="#top">La Galerie d'art de Rembrandt</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-items"><a href="#s2_trio" class="nav-link">Works</a></li>
+                    <li class="nav-items"><a href="#s3_painting_of_the_week" class="nav-link">Highlighted Painting</a></li>
+                    <li class="nav-items"><a href="#s4_about" class="nav-link">About</a></li>
+                    <li class="nav-items"><a href="#s5_prints" class="nav-link">Prints</a></li>
+                    <li class="nav-items"><a href="#s6_paintings" class="nav-link">Paintings</a></li>
+                    <li class="nav-items"><a href="#s7_drawings" class="nav-link">Drawings</a></li>
+                    <li class="nav-items"><a href="#s8_contact" class="nav-link">Contact</a></li>
+                    <li class="nav-items"><a href="#s9_footer" class="nav-link">Info</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
     <!--s1_header-->
         <section id="s1_header">
                 <aside class="container">
@@ -72,7 +95,7 @@
         <section class="text-center py-5" id="s3_painting_of_the_week">
            <div class="container p-4">
             <h1 class="text-danger">Highlighted Painting</h1>
-            <img class="img-fluid my-3 border border-light" src="img/s3-painting-of-the-week-Rembrandt_castello_sulla_riva_1640-1650.png" alt="Painting of the Week">
+            <img class="img-fluid my-3 border border-light" src="img/s3-painting-of-the-week-Rembrandt_castello_sulla_riva_1640-1650.png" alt="Painting of the Week" style="border-width: 3px!important;">
             <p class="text-white">Castle Overlooking a River (circa 1645)</p>
             </div>
         </section>
@@ -132,7 +155,7 @@
             
             <aside>
                <div class="my-paintings-container my-paintings-area my-cursor">
-                <div class="painting-1"></div>
+                <div class="painting-1" data-toggle="modal" data-target="#painting1"></div>
                 <div class="painting-2"></div>
                 <div class="painting-3"></div>
                 <div class="painting-4"></div>
@@ -208,10 +231,16 @@
                 Saturday: 10:00 am - 3:00 pm<br>
                 Closed Sundays and Mondays
                 </p>
-              <i class="fa fa-facebook-f"></i>
-               <i class="fa fa-twitter"></i>
-               <i class="fa fa-linkedin"></i>
-               <i class="fa fa-instagram"></i>
+                
+                <div class="btn-toolbar" role="toolbar" aria-label="Social Media Buttons">
+                   <div class="btn-group m-2 btn-group-sm">
+                    <button type="button" class="btn btn-info"> <i class="fa fa-facebook-f"></i></button>
+                    <button type="button" class="btn btn-info"> <i class="fa fa-twitter"></i></button>
+                   <button type="button" class="btn btn-info"> <i class="fa fa-linkedin"></i></button>
+                   <button type="button" class="btn btn-info"> <i class="fa fa-instagram"></i></button>
+                   </div>
+                </div>
+               
             </aside>
             
             <aside class="footer_menu py-5" style="grid-area: footer_menu;">
@@ -306,5 +335,23 @@
 		});
 	});
 </script>
+ 
+<!-- ------------- Painting1 ----------------->
+ <div class="modal fade" id="painting1" tabindex="1" role="dialog" aria-labelledby="Rembrandt Painting 1" aria-hidden="true">
+     <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <button class="close" type="button" data-dismiss="modal" aria-label="close">
+                     <span aria-hidden="true">&times;</span>
+                 </button>
+             </div>
+             
+             <div class="modal-body">
+                 <img src="img/paintings-img/1920px-P1150002_Cognacq-Jay_Rembrandt_anesse_de_Balaam_rwk.jpg" alt="" class="img-fluid">
+             </div>
+         </div>
+     </div>
+ </div>
+ 
   </body>
 </html>
