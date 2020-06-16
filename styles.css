@@ -169,7 +169,7 @@
     }
 }
 
-/* ------------ s5_prints -------------- */
+/* ------------ s5_prints & s7_drawings -------------- */
 .my-thumbs{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -184,6 +184,13 @@
     box-shadow: 0px 0px 0px rgba(0,0,0,0);
 }
 
+#s7_drawings{
+    background: url("img/interface-imgs/s7-drawing.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: auto;
+    text-align: center;
+}
 
 /* ------------ s6_paintings -------------- */
 
@@ -223,13 +230,6 @@
     justify-self: end;
     align-self: end;
 }
-
-@media (max-width: 576px){
-    .windmill{
-        display: none;
-    }
-}
-    
     
 @media (max-width: 768px) { 
             
@@ -303,8 +303,6 @@
     background-size: cover;
     grid-area: ten;
 }
-
-/* ------------ s7_drawings -------------- */
 
 /* ------------ s8_contact -------------- */
 .contact-copy{
@@ -453,4 +451,3 @@
         justify-self: flex-end;
     }
 }
-/* ------------ s10_copyright -------------- */
