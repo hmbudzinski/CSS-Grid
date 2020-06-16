@@ -184,7 +184,9 @@
     box-shadow: 0px 0px 0px rgba(0,0,0,0);
 }
 
+
 /* ------------ s6_paintings -------------- */
+
 .my-paintings-container{
     display: grid;
     min-height: 600px;
@@ -211,10 +213,6 @@
     grid-area: my-paintings-area;
 }
 
-.windmill{
-    grid-area: windmill;
-}
-
 #s6_paintings aside{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
@@ -229,6 +227,19 @@
 @media (max-width: 576px){
     .windmill{
         display: none;
+    }
+}
+    
+    
+@media (max-width: 768px) { 
+            
+    #s6_paintings aside{    
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+            "my-paintings-area"
+            "windmill"
+        ;
     }
 }
 
@@ -370,38 +381,21 @@
     grid-area: footer_img;
 }
 
-.s9_footer_grid{
-    font-size: small;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat( 6, auto);
-    grid-gap: 10px;
-    grid-template-areas: 
-        "footer_hours"
-        "footer-menu"
-        "footer_museum"
-        "footer_names"
-        "footer_links"
-        "footer_img"
-        ;
-}
-
-.footer_museum h1{
-    text-align: center;
-}
-.footer_museum, .footer_links{
-    flex-direction: row-reverse;
-    text-align: right;
-}
-.footer_img{
-    width: 50%;
-    justify-self: flex-end;
-}
-.footer_hours{
-    text-align: left;
-}
-
 @media (max-width: 767px) {
+    .s9_footer_grid{
+	    grid-template-columns: repeat(1, 1fr);
+	    grid-template-rows: repeat(6, auto);
+	    grid-gap 10px;
+	    grid-template-areas: 
+	        "footer_hours"
+	        "footer_menu"
+	        "footer_museum"
+	        "footer_painting_names"
+	        "footer_links"
+	        "footer_img"
+	        "footer_copyright";
+	}
+    
     .footer_menu, .footer_museum, .footer_names, .footer_links{
         border-top: 1px dashed black;
         padding-top: 10px;
@@ -410,18 +404,31 @@
         align-items: center;
     }
     
+    .footer_museum h1{
+        text-align: center;
+    }
+    
+    .footer_museum, .footer_links{
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+
     .footer_img{
-        transform: scaleX(-1);
+        width:  50%;
+	    justify-self: flex-end;
     }
     
     .footer_hours{
         text-align: center;
     }
+    
 }
 
+/*
 @media (min-width: 768px){
     .s9_footer_grid{
         font-size: initial;
+        display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
         "footer_hours footer_img"
@@ -429,11 +436,23 @@
         "footer_names footer_links"
         ;
     }
+*/
     
-    .footer_museum, .footer_links, .footer_links h1{
+/*
+    .footer_museum, .footer_links, .footer_museum h1{
         flex: none;
         padding-top: 0;
         text-align: left; 
+        flex-direction:column;
+        justify-content:flex-start;
+        align-items: left;
+    }
+*/
+/*
+    .footer_img{
+        width:  50%;
+        justify-self: flex-end;
     }
 }
+*/
 /* ------------ s10_copyright -------------- */
